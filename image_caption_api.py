@@ -1,4 +1,9 @@
 # image_caption_api.py
+
+import os
+os.environ["TRANSFORMERS_CACHE"] = "/tmp/huggingface"
+
+
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoTokenizer
